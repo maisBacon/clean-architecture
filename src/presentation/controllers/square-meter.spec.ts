@@ -1,5 +1,5 @@
 import { SquareMeters } from './square-meters'
-import { badRequest, serverError } from '../helpers/http'
+import { badRequest, ok, serverError } from '../helpers/http'
 import { MissingParamError } from '../errors'
 import { PropertySpy, throwError } from './mock'
 
@@ -43,11 +43,11 @@ describe('Controller', () => {
     expect(res).toEqual(serverError(new Error()))
   })
 
-  // test('Should return 200', () => {
-  //   const sut = makeSut()
-  //   const httpRequest = { body: { meters: '2', value: '2' } }
-  //   const res = sut.handle(httpRequest)
-  //   expect(res.statusCode).toBe(200)
-  //   expect(res).toEqual(ok('body'))
-  // })
+  test('Should return 200', () => {
+    const { sut } = makeSut()
+    const httpRequest = { body: { meters: '2', value: '2' } }
+    const res = sut.handle(httpRequest)
+    expect(res.statusCode).toBe(200)
+    expect(res).toEqual(ok('R$10.000,00'))
+  })
 })

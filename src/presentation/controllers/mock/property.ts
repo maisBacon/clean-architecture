@@ -1,6 +1,8 @@
+import { Property } from '../../../domain'
 export class PropertySpy {
-  result = '10'
-  calculation (request: {meters: string, value: string}): string {
+  result = { success: 'R$10.000,00' }
+
+  calculation (request: Property.Params): Property.Result {
     return this.result
   }
 }
