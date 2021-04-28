@@ -1,11 +1,10 @@
 export interface Property {
-  calculation: (request: Property.Params) => Property.Result
+  calculation: (request: Property.Params) => Promise<Property.Result>
 }
 
 export namespace Property {
-  export type Result = {
-    success: string
-  }
+  export type Result = string
+
   export type Params = {
     meters: string
     value: string

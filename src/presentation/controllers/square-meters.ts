@@ -9,15 +9,15 @@ export class SquareMeters implements Controller {
     this.property = property
   }
 
-  handle (httpRequest: HttpRequest): HttpResponse {
+  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       for (const param of requiredParams) {
         if (!httpRequest.body[param]) {
           return badRequest(new MissingParamError(param))
         }
       }
-      const result = this.property.calculation(httpRequest.body)
-      return ok(result.success)
+      const result = await this.property.calculation(httpRequest.body)
+      return ok(result)
     } catch (error) {
       return serverError(error)
     }
