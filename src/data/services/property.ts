@@ -1,6 +1,4 @@
-import { Property } from '../../domain'
-import { Currency } from '../../domain/usecases/currency'
-import { SquareMeters } from '../../domain/usecases/square-meters'
+import { Property , Currency, SquareMeters } from '../../domain'
 
 export class DBProperty implements Property {
   constructor (

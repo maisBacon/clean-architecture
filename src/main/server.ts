@@ -1,4 +1,5 @@
 import confApp from './config/app'
+require('../../bootstrap')
 
 const app = confApp
-app.listen(3333, () => console.log(`Server running at http://localhost:${3333}`))
+app.listen(process.env.PORT, () => console.log(`Server running at http://localhost:${process.env.PORT}`))

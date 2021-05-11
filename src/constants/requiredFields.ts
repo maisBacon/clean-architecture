@@ -1,1 +1,1 @@
-export const requiredParams = ['value', 'meters']
+export const requiredParams = ['meters']
