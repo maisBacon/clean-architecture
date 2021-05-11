@@ -10,7 +10,6 @@ export class SquareMeters implements Controller {
   }
 
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
-    console.log('CONTROLLER',httpRequest)
     try {
       for (const param of requiredParams) {
         if (!httpRequest.body[param]) {

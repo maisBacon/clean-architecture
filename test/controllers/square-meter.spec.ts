@@ -1,6 +1,6 @@
-import { SquareMeters } from './square-meters'
-import { badRequest, ok, serverError } from '../helpers/http'
-import { MissingParamError } from '../errors'
+import { SquareMeters } from '../../src/presentation/controllers/square-meters'
+import { badRequest, ok, serverError } from '../../src/presentation/helpers/http'
+import { MissingParamError } from '../../src/presentation/errors'
 import { PropertySpy, throwError } from './mock'
 
 type SutTypes = {

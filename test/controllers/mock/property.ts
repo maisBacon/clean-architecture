@@ -1,4 +1,4 @@
-import { Property } from '../../../domain'
+import { Property } from '../../../src/domain'
 export class PropertySpy {
   result = 'R$10.000,00'
 
