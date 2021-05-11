@@ -12,6 +12,7 @@ export class DBProperty implements Property {
   }
 
   async calculation (request: Property.Params): Promise<Property.Result> {
+    console.log('service', request)
     const getValue = !request.value && (await this.squareMeters.getPrice())
     const price = request.value || getValue.data.value
     const result = parseInt(request.meters) * parseInt(price)
