@@ -1,11 +1,11 @@
 import { Controller } from '../../presentation/protocols'
 import { UserInputError, ApolloError } from 'apollo-server-express'
 
-export const adaptResolver = async (controller: Controller,args?: any, context?: any): Promise<any> => {
-  console.log('===',controller)
-  console.log('===',args)
+export const adaptResolver = async (controller: Controller, args?: any, context?: any): Promise<any> => {
   const request = {
-    ...(args || {})
+    body: {
+      ...(args || {})
+    }
   }
   const httpResponse = await controller.handle(request)
   switch (httpResponse.statusCode) {

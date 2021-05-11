@@ -3,6 +3,6 @@ import Controller from '../../factory/makeController'
 
 export default {
   Query: {
-    squareMeters: async () => adaptResolver(Controller)
+    squareMeters: async (_: any, args: any, context: any) => adaptResolver(Controller, args, context)
   }
 }
