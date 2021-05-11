@@ -1,4 +1,4 @@
-import setupRoutes from './routes'
+import setupRoutes from './setup'
 import express from 'express'
 
 const app = express()
