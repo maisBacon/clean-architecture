@@ -1,5 +1,6 @@
-import typeDefs from '../graphql/type-defs/square-meters'
-import resolvers from '../graphql/resolvers/square-meters'
+
+import typeDefs from '../graphql/typeDefs'
+import resolvers from '../graphql/resolvers'
 import { ApolloServer } from 'apollo-server-express'
 import { Express } from 'express'
 
