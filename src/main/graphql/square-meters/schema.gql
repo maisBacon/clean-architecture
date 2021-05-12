@@ -1,3 +1,8 @@
+input Values {
+  meters: String!
+  value: String
+}
+
 type Query {
-    squareMeters(meters: String!, value: String): String
+    squareMeters(data: Values ): String
   }
