@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "dev": "npx ts-node src/main/server.ts",
-    "start": "nodemon dist/src/main/server.js"
+    "dev": "ts-node-dev --inspect --respawn --transpile-only src/main/server.ts",
+    "start": "node dist/src/main/server.js"
   },
   "keywords": [],
   "author": "",
@@ -26,8 +26,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^5.0.0",
     "git-commit-msg-linter": "^3.1.0",
-    "nodemon": "^2.0.7",
-    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.4"
   },
   "dependencies": {
