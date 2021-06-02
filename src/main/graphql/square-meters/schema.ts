@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server-express'
-export default gql`
+export const type = gql`
 type Query {
     squareMeters (meters: String! ,value: String): String
   }`
