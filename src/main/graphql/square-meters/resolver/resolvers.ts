@@ -1,5 +1,5 @@
-import { adaptResolver } from '../../adapters/apollo-resolver'
-import Controller from '../../factory/makeController'
+import { adaptResolver } from '../../../adapters/apollo-resolver'
+import Controller from '../../../factory/makeController'
 
 export default {
   Query: {
