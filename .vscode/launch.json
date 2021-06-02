@@ -5,15 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Docker: Attach to Node",
             "type": "node",
             "request": "attach",
-            "remoteRoot": "/testeapidev",
-            "port": 9229,
-            "address": "localhost",
-            "localRoot": "${workspaceFolder}/src/main/",
-            "protocol": "inspector",
+            "name": "Docker: Attach to Node",
+            "remoteRoot": "/usr/src/visits",
+            "port": 9292,
             "restart": true
-        }
+        },
     ]
 }
