@@ -5,5 +5,5 @@ import { loadFilesSync } from '@graphql-tools/load-files'
 const resolversArray = loadFilesSync(path.join(__dirname, '..', 'graphql', '**' , 'resolvers.ts'))
 export const resolvers = mergeResolvers(resolversArray)
 
-const typesArray = loadFilesSync(path.join(__dirname, '..', 'graphql', '**', '*.gql'))
+const typesArray = loadFilesSync(path.join(__dirname, '..', 'graphql', '**', 'schema.ts'))
 export const typeDefs = mergeTypeDefs(typesArray)

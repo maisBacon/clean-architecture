@@ -4,7 +4,7 @@ import { UserInputError, ApolloError } from 'apollo-server-express'
 export const adaptResolver = async (controller: Controller, args?: any, context?: any): Promise<any> => {
   const request = {
     body: {
-      ...(args.data || {})
+      ...(args || {})
     }
   }
   const httpResponse = await controller.handle(request)
