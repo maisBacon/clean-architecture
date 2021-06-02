@@ -1,8 +1,0 @@
-input Values {
-  meters: String!
-  value: String
-}
-
-type Query {
-    squareMeters(data: Values ): String
-  }
