@@ -8,8 +8,8 @@
             "type": "node",
             "request": "attach",
             "name": "Docker: Attach to Node",
-            "remoteRoot": "/usr/src/visits",
-            "port": 9292,
+            "remoteRoot": "/usr/src/api",
+            "port": 9222,
             "restart": true
         },
     ]
